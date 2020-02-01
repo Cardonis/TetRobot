@@ -8,6 +8,8 @@ public class BuildController : MonoBehaviour
 
     public List<GameObject> piecesComing;
 
+    public List<GameObject> piecesComingPlaceurs;
+
     // Start is called before the first frame update
     virtual public void Start()
     {
@@ -17,11 +19,24 @@ public class BuildController : MonoBehaviour
         }
 
         currentPiece = Instantiate(piecesComing[0], GameObject.Find("Ship1").transform);
+
+        for (int i = 0; i < 5; i++)
+        {
+            Instantiate(piecesComing[i], piecesComingPlaceurs[i].transform);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
+
+    public void NextPiece()
+    {
+        //buildController.GetComponent<BuildController1>().piecesComing.Add(GameObject.Find("PieceGenerator").GetComponent<PieceGenerator>().GivePiece());
+        Instantiate(piecesComing[0], currentPiece.transform);
+        Destroy(currentPiece);
         
     }
 
@@ -44,5 +59,16 @@ public class BuildController : MonoBehaviour
 
         currentPiece.transform.eulerAngles += Vector3.forward * angle;
     }
-    
+
+    public void UpdatePiecesComing()
+    {
+        for(int i = 0; i < 5; i++)
+        {
+            Destroy(piecesComingPlaceurs[i].transform.GetChild(0).gameObject);
+            Instantiate(piecesComing[i], piecesComingPlaceurs[i].transform);
+        }
+        
+    }
+
+
 }

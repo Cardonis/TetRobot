@@ -10,6 +10,8 @@ public class ButtonController : MonoBehaviour, ISelectHandler
     GameObject buildController;
 
     bool readyToPlace = false;
+    bool thisBlocked = false;
+    int numberOfBlocks = 0;
 
     public float distanceBetweenButtons;
 
@@ -78,31 +80,40 @@ public class ButtonController : MonoBehaviour, ISelectHandler
 
             foreach (GameObject button1 in buttons1)
             {
-
                 foreach (GameObject bloc in blocs)
                 {
                     if (bloc.transform.position.x >= button1.transform.position.x - 0.2f && bloc.transform.position.x <= button1.transform.position.x + 0.2f
                         && bloc.transform.position.y >= button1.transform.position.y - 0.2f && bloc.transform.position.y <= button1.transform.position.y + 0.2f)
                     {
-                        thisBloc = bloc;
+                        button1.GetComponent<ButtonController>().thisBloc = bloc;
+                        button1.GetComponent<ButtonController>().thisBlocked = true;
+                        button1.GetComponent<ButtonController>().numberOfBlocks++;
                     }
 
                 }
             }
-            
-                foreach (GameObject button1 in buttons1)
+
+            foreach (GameObject button1 in buttons1)
+            {
+                if (button1.GetComponent<ButtonController>().readyToPlace == true && button1.GetComponent<ButtonController>().thisBloc != null)
                 {
-                    if (button1.GetComponent<ButtonController>().readyToPlace == true && button1.GetComponent<ButtonController>().thisBloc != null)
-                    {
-                        stop = false;
-                        break;
-                    }
-
+                    stop = false;
+                    break;
                 }
-            
-            
 
-            if(stop == false)
+            }
+
+            foreach (GameObject button1 in buttons1)
+            {
+                if (button1.GetComponent<ButtonController>().numberOfBlocks > 1)
+                {
+                    stop = true;
+                    break;
+                }
+                    
+            }
+
+            if (stop == false)
             {
                 foreach (GameObject button1 in buttons1)
                 {
@@ -114,7 +125,23 @@ public class ButtonController : MonoBehaviour, ISelectHandler
 
                 buildController.GetComponent<BuildController1>().currentPiece.transform.position = transform.position;
                 buildController.GetComponent<BuildController1>().piecesComing.Add(GameObject.Find("PieceGenerator").GetComponent<PieceGenerator>().GivePiece());
+
+                buildController.GetComponent<BuildController1>().UpdatePiecesComing();
             }
+            
+                foreach (GameObject button1 in buttons1)
+                {
+                    if (button1.GetComponent<ButtonController>().thisBlocked == true)
+                    {
+                        button1.GetComponent<ButtonController>().thisBloc = null;
+                        button1.GetComponent<ButtonController>().thisBlocked = false;
+                    }
+
+                
+
+                    button1.GetComponent<ButtonController>().numberOfBlocks = 0;
+
+                }
             
 
         }
