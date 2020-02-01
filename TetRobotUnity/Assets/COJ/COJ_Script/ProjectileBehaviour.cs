@@ -13,8 +13,20 @@ public class ProjectileBehaviour : MonoBehaviour
     void Start()
     {
         bullet = gameObject.GetComponent<Rigidbody2D>();
-        player = GameObject.Find("Player1");
-        bulletDir = player.transform.up;
+        if (gameObject.CompareTag("P1"))
+        {
+            player = GameObject.Find("Player1");
+            bulletDir = player.transform.up;
+            Debug.Log(bulletDir);
+        }
+        else if(gameObject.CompareTag("P2"))
+        {
+            player = GameObject.Find("Player2");
+            bulletDir = player.transform.up;
+            Debug.Log(bulletDir);
+        }
+        StartCoroutine(Destroy());
+     
     }
 
     // Update is called once per frame
@@ -30,5 +42,12 @@ public class ProjectileBehaviour : MonoBehaviour
     void MoveForward()
     {
         bullet.velocity = bulletDir * speed;
+        Debug.Log("allo");
+    }
+
+    IEnumerator Destroy()
+    {
+        yield return new WaitForSeconds(3f);
+        Destroy(gameObject);
     }
 }
