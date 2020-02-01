@@ -7,9 +7,11 @@ public class BuildController1 : BuildController
     float rotateTimer;
 
     // Start is called before the first frame update
-    void Start()
+    override public void Start()
     {
-        
+        base.Start();
+
+
     }
 
     // Update is called once per frame
