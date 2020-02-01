@@ -5,8 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Button1
+<<<<<<< HEAD
   - P2
   - P1
+=======
+  - Bloc
+>>>>>>> Aurélien_16h_01_02
   layers:
   - Default
   - TransparentFX
