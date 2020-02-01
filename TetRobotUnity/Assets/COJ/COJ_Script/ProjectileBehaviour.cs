@@ -30,7 +30,6 @@ public class ProjectileBehaviour : MonoBehaviour
     void MoveForward()
     {
         bullet.velocity = bulletDir * speed;
-        Debug.Log("allo");
     }
 
     IEnumerator Destroy()
