@@ -38,4 +38,11 @@ public class ProjectileBehaviour : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Destroy(gameObject);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Bloc"))
+        {
+            collision.GetComponent<BlocHit>().DamageTaken();
+        }
+    }
 }
