@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bulletPrefab;
     bool canShoot = true;
 
+    public string fire, horizontalAxe, verticalAxe, rotateRight, rotateLeft;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Rotate();
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton(fire))
         {
             if(canShoot == true)
             {
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Move()
     {
-        Vector2 playerDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Vector2 playerDir = new Vector2(Input.GetAxis(horizontalAxe), Input.GetAxis(verticalAxe));
         player.AddForce(playerDir * speed * Time.deltaTime);
     }
 
@@ -49,11 +50,11 @@ public class PlayerController : MonoBehaviour
     {
 
         float zAngle;
-        if(Input.GetAxis("RT") > 0.5f)
+        if(Input.GetAxis(rotateRight) > 0.5f)
         {
             zAngle = 1;
         }
-        else if(Input.GetAxis("LT") > 0.5f)
+        else if(Input.GetAxis(rotateLeft) > 0.5f)
         {
             zAngle = -1;
         }
