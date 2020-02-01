@@ -23,6 +23,7 @@ public class FollowTargets : MonoBehaviour
     {
         cam = GetComponent<Camera>();
         cam.orthographicSize = size;
+        
     }
     private void LateUpdate()
     {
