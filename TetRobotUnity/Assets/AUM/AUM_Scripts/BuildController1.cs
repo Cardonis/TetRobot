@@ -17,7 +17,7 @@ public class BuildController1 : BuildController
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetAxis("LT") > 0 && rotateTimer < 0)
+        if(Input.GetAxis("LT_Player1") > 0 && rotateTimer < 0)
         {
             Rotate("Left");
             rotateTimer = 0.5f;
@@ -27,7 +27,7 @@ public class BuildController1 : BuildController
             rotateTimer -= Time.deltaTime;
         }
 
-        if (Input.GetAxis("RT") > 0 && rotateTimer < 0)
+        if (Input.GetAxis("RT_Player1") > 0 && rotateTimer < 0)
         {
             Rotate("Right");
             rotateTimer = 0.5f;
