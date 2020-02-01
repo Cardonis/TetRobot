@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
             if(canShoot == true)
             {
                 canShoot = false;
-                StartCoroutine(Shoot());
+               // StartCoroutine(Shoot());
             }
         }
     }
@@ -66,10 +66,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    IEnumerator Shoot()
+    /*IEnumerator Shoot()
     {
         Instantiate(bulletPrefab, gameObject.transform.position, Quaternion.identity);
         yield return new WaitForSeconds(0.2f);
         canShoot = true;
-    }
+    }*/
 }

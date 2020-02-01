@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class GatlingBehaviour : MonoBehaviour
 {
+    public ProjectileBehaviour bulletBehaviour;
     public GameObject bulletPrefab;
     bool canShoot = true;
     public string fire;
+    public Transform firePoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        firePoint = gameObject.transform.GetChild(0);
     }
 
     // Update is called once per frame
@@ -28,9 +30,15 @@ public class GatlingBehaviour : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Tire une balle depuis la gatling
+    /// </summary>
+    /// <returns></returns>
     IEnumerator Shoot()
     {
-        Instantiate(bulletPrefab, gameObject.transform.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+        bulletBehaviour = bullet.GetComponent<ProjectileBehaviour>();
+        bulletBehaviour.bulletDir = gameObject.transform.up;
         yield return new WaitForSeconds(0.2f);
         canShoot = true;
     }
