@@ -6,7 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D player;
     public float speed;
-    float rotationSpeed;
+    public float rotationSpeed;
+
+    public GameObject bulletPrefab;
+    bool canShoot = true;
 
 
     // Start is called before the first frame update
@@ -19,6 +22,15 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
+        Rotate();
+        if (Input.GetButton("Fire1"))
+        {
+            if(canShoot == true)
+            {
+                canShoot = false;
+                StartCoroutine(Shoot());
+            }
+        }
     }
 
     /// <summary>
@@ -35,7 +47,28 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Rotate()
     {
-        float turn;
 
+        float zAngle;
+        if(Input.GetAxis("RT") > 0.5f)
+        {
+            zAngle = 1;
+        }
+        else if(Input.GetAxis("LT") > 0.5f)
+        {
+            zAngle = -1;
+        }
+        else
+        {
+            zAngle = 0;
+        }
+        gameObject.transform.Rotate(0, 0, zAngle * rotationSpeed * Time.deltaTime,Space.World);
+
+    }
+
+    IEnumerator Shoot()
+    {
+        Instantiate(bulletPrefab, gameObject.transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(0.2f);
+        canShoot = true;
     }
 }
