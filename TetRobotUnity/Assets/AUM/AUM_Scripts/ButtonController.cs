@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.ParticleSystemJobs;
 
 public class ButtonController : MonoBehaviour, ISelectHandler
 {
@@ -22,9 +23,13 @@ public class ButtonController : MonoBehaviour, ISelectHandler
     public GameObject rightButton;
     public GameObject downButton;
 
+    ParticleSystem stars;
+
     // Start is called before the first frame update
     void Start()
     {
+        stars = transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
+
         if(player == 1)
         {
             buildController = GameObject.Find("BuildController1");
@@ -131,6 +136,8 @@ public class ButtonController : MonoBehaviour, ISelectHandler
                 buildController.GetComponent<BuildController1>().piecesComing.Add(buildController.GetComponent<BuildController1>().pieceGenerator.GetComponent<PieceGenerator>().GivePiece());
 
                 buildController.GetComponent<BuildController1>().UpdatePiecesComing();
+
+                stars.Play();
             }
             
                 foreach (GameObject button1 in buttons1)
@@ -206,6 +213,8 @@ public class ButtonController : MonoBehaviour, ISelectHandler
                 buildController.GetComponent<BuildController2>().piecesComing.Add(buildController.GetComponent<BuildController2>().pieceGenerator.GetComponent<PieceGenerator>().GivePiece());
                                                             
                 buildController.GetComponent<BuildController2>().UpdatePiecesComing();
+
+                stars.Play();
             }
 
             foreach (GameObject button2 in buttons2)
