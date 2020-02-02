@@ -9,6 +9,7 @@ public class ReactorBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         reactorAnim = gameObject.GetComponent<Animator>(); 
     }
 

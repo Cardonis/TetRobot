@@ -20,13 +20,13 @@ public class GatlingBehaviour : MonoBehaviour
         firePoint = gameObject.transform.GetChild(0);
         fireAnim = gameObject.GetComponent<Animator>();
 
-        gM = GameObject.FindGameObjectWithTag("GameManager");
+        //gM = GameObject.FindGameObjectWithTag("GameManager");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (gM.GetComponent<GameplayPhase>().inBuild == false)
+        //if (gM.GetComponent<GameplayPhase>().inBuild == false)
         {
             if (Input.GetButton(fire))
             {
