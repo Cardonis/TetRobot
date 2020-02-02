@@ -41,7 +41,7 @@ public class GatlingBehaviour : MonoBehaviour
             {
                 fireAnim.SetBool("isShooting", false);
             }
-        }
+        //}
        
     }
 

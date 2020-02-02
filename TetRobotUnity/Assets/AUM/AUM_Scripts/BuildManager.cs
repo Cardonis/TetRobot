@@ -9,7 +9,10 @@ public class BuildManager : MonoBehaviour
     float timer;
     public bool timering = false;
     TextMeshProUGUI textTimer;
-    
+
+    public BuildController1 buildController1;
+    public BuildController2 buildController2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +45,10 @@ public class BuildManager : MonoBehaviour
     public void EndBuild()
     {
         timering = false;
+
+        Destroy(buildController1.currentPiece);
+        Destroy(buildController2.currentPiece);
+
         Debug.Log("Transitiooooooooooon");
         GameObject.Find("BuildPhase").SetActive(false);
     }

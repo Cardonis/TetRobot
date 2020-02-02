@@ -10,12 +10,14 @@ public class BuildController : MonoBehaviour
 
     public List<GameObject> piecesComingPlaceurs;
 
+    public GameObject pieceGenerator;
+
     // Start is called before the first frame update
     virtual public void Start()
     {
         for(int i = 0; i < 5; i++)
         {
-            piecesComing.Add(GameObject.Find("PieceGenerator").GetComponent<PieceGenerator>().GivePiece());
+            piecesComing.Add(pieceGenerator.GetComponent<PieceGenerator>().GivePiece());
         }
 
         currentPiece = Instantiate(piecesComing[0], GameObject.Find("Ship1").transform);
@@ -34,9 +36,19 @@ public class BuildController : MonoBehaviour
 
     public void NextPiece()
     {
-        //buildController.GetComponent<BuildController1>().piecesComing.Add(GameObject.Find("PieceGenerator").GetComponent<PieceGenerator>().GivePiece());
-        Instantiate(piecesComing[0], currentPiece.transform);
+        piecesComing.RemoveAt(0);
+
+        Vector2 position = currentPiece.transform.position;
+
         Destroy(currentPiece);
+
+
+        currentPiece = Instantiate(piecesComing[0], GameObject.Find("Ship1").transform);
+
+        currentPiece.transform.position = position;
+        piecesComing.Add(pieceGenerator.GetComponent<PieceGenerator>().GivePiece());
+
+        UpdatePiecesComing();        
         
     }
 
