@@ -9,6 +9,8 @@ TagManager:
   - Bloc
   - Button1
   - GameManager
+  - Button2
+  - obstacles
   layers:
   - Default
   - TransparentFX

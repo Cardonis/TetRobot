@@ -58,7 +58,6 @@ GameObject:
   m_Component:
   - component: {fileID: 180565980877768958}
   - component: {fileID: 6970893183900826420}
-  - component: {fileID: 1296442676735542863}
   m_Layer: 0
   m_Name: GatlingBloc5
   m_TagString: Untagged
@@ -96,21 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471f11d607f70ed44a078bcd37db83d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxPv: 3
-  currentPv: 0
---- !u!114 &1296442676735542863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4802808638329869114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 471f11d607f70ed44a078bcd37db83d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxPv: 3
+  maxPv: 5
   currentPv: 0
 --- !u!114 &1051170800129353057
 MonoBehaviour:

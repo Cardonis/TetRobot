@@ -45,6 +45,7 @@ public class BuildManager : MonoBehaviour
     public void EndBuild()
     {
         timering = false;
+        GameObject.Find("GameManager").GetComponent<GameplayPhase>().inBuild = false;
 
         Destroy(buildController1.currentPiece);
         Destroy(buildController2.currentPiece);

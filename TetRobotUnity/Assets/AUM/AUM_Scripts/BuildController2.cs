@@ -12,7 +12,7 @@ public class BuildController2 : BuildController
     {
         base.Start();
 
-
+        currentPiece = Instantiate(piecesComing[0], GameObject.Find("Ship2").transform);
     }
 
     // Update is called once per frame

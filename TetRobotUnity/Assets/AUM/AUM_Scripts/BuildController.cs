@@ -20,7 +20,7 @@ public class BuildController : MonoBehaviour
             piecesComing.Add(pieceGenerator.GetComponent<PieceGenerator>().GivePiece());
         }
 
-        currentPiece = Instantiate(piecesComing[0], GameObject.Find("Ship1").transform);
+        
 
         for (int i = 0; i < 5; i++)
         {

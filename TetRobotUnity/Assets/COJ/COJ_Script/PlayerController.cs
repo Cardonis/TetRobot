@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float rotationSpeed;
 
-    public GameObject bulletPrefab;
     bool canShoot = true;
 
     public string fire, horizontalAxe, verticalAxe, rotateRight, rotateLeft;
@@ -27,6 +26,11 @@ public class PlayerController : MonoBehaviour
         {
             Move();
             Rotate();
+            player.simulated = true;
+        }
+        else
+        {
+            player.simulated = false;
         }
             
     }

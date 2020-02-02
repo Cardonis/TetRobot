@@ -4910,7 +4910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a8ff14c27143df41a251d169c1617e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
   bulletDir: {x: 0, y: 0}
 --- !u!50 &1228557085898149342
 Rigidbody2D:

@@ -12,6 +12,7 @@ public class GatlingBehaviour : MonoBehaviour
     Animator fireAnim;
 
     public GameObject gM;
+    public float shootRate;
 
 
     // Start is called before the first frame update
@@ -20,13 +21,13 @@ public class GatlingBehaviour : MonoBehaviour
         firePoint = gameObject.transform.GetChild(0);
         fireAnim = gameObject.GetComponent<Animator>();
 
-        //gM = GameObject.FindGameObjectWithTag("GameManager");
+        gM = GameObject.FindGameObjectWithTag("GameManager");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (gM.GetComponent<GameplayPhase>().inBuild == false)
+        if (gM.GetComponent<GameplayPhase>().inBuild == false)
         {
             if (Input.GetButton(fire))
             {
@@ -41,7 +42,7 @@ public class GatlingBehaviour : MonoBehaviour
             {
                 fireAnim.SetBool("isShooting", false);
             }
-        //}
+        }
        
     }
 
@@ -54,7 +55,7 @@ public class GatlingBehaviour : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
         bulletBehaviour = bullet.GetComponent<ProjectileBehaviour>();
         bulletBehaviour.bulletDir = gameObject.transform.up;
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(shootRate);
         canShoot = true;
     }
 }

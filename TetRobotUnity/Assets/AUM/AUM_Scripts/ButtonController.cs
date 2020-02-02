@@ -200,7 +200,7 @@ public class ButtonController : MonoBehaviour, ISelectHandler
                 }
 
                 buildController.GetComponent<BuildController2>().piecesComing.RemoveAt(0);
-                buildController.GetComponent<BuildController2>().currentPiece = Instantiate(buildController.GetComponent<BuildController2>().piecesComing[0], GameObject.Find("Ship1").transform);
+                buildController.GetComponent<BuildController2>().currentPiece = Instantiate(buildController.GetComponent<BuildController2>().piecesComing[0], GameObject.Find("Ship2").transform);
                                                             
                 buildController.GetComponent<BuildController2>().currentPiece.transform.position = transform.position;
                 buildController.GetComponent<BuildController2>().piecesComing.Add(buildController.GetComponent<BuildController2>().pieceGenerator.GetComponent<PieceGenerator>().GivePiece());

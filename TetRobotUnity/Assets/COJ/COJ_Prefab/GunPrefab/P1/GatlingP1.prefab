@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 634423010954018281}
   - component: {fileID: 634423010954018280}
   - component: {fileID: 874487374}
+  - component: {fileID: 5066447362909512395}
   m_Layer: 0
   m_Name: GatlingP1
   m_TagString: Untagged
@@ -128,6 +129,8 @@ MonoBehaviour:
     type: 3}
   fire: Fire_Player1
   firePoint: {fileID: 0}
+  gM: {fileID: 0}
+  shootRate: 0.8
 --- !u!95 &874487374
 Animator:
   serializedVersion: 3
@@ -147,6 +150,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5066447362909512395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634423010954018262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c07c4207c9a08d4685b23be6169845a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4288519641113473042
 GameObject:
   m_ObjectHideFlags: 0

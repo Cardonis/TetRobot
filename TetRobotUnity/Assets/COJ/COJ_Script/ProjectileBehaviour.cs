@@ -44,5 +44,9 @@ public class ProjectileBehaviour : MonoBehaviour
             collision.GetComponent<BlocHit>().DamageTaken();
             Destroy(gameObject);
         }
+        else if (collision.CompareTag("obstacles"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
