@@ -9,11 +9,13 @@ public class GatlingBehaviour : MonoBehaviour
     bool canShoot = true;
     public string fire;
     public Transform firePoint;
+    Animator fireAnim;
 
     // Start is called before the first frame update
     void Start()
     {
         firePoint = gameObject.transform.GetChild(0);
+        fireAnim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,8 +27,13 @@ public class GatlingBehaviour : MonoBehaviour
             {
                 canShoot = false;
                 StartCoroutine(Shoot());
+                fireAnim.SetBool("isShooting", true);
             }
 
+        }
+        else
+        {
+            fireAnim.SetBool("isShooting", false);
         }
     }
 

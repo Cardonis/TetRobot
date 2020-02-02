@@ -2504,8 +2504,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pieces:
-  - {fileID: 2678611976034989604, guid: 954adc85e92ea7c4e9758b123a6d83c5, type: 3}
-  - {fileID: 7464812278027272003, guid: 8fe456de611c3824c85543368da21e43, type: 3}
+  - {fileID: 6172920878883035518, guid: 4558bee943fa81d4b87ca027d91155b3, type: 3}
+  - {fileID: 8481105077039451669, guid: 6af341ca2fb041b4983ec3e2c93d8a74, type: 3}
+  - {fileID: 8644315172298136679, guid: 17ce74ade729df742bdc2a560d2486f9, type: 3}
+  - {fileID: 8125568600373660047, guid: bd5eb42783af37f428935e8acf10b104, type: 3}
+  - {fileID: 5807705008257493960, guid: 117b9de07a6ac494983852095e3de767, type: 3}
+  - {fileID: 5807705008257493960, guid: 117b9de07a6ac494983852095e3de767, type: 3}
+  - {fileID: 8666534396386655987, guid: 12ed80c8527f48945bbdb65e02187ce3, type: 3}
+  - {fileID: 4522819215114394500, guid: 6874ef07f2507e14d8d8017a46ac16f6, type: 3}
+  - {fileID: 6605071396836869109, guid: 8fa134fc153fc154593ad127a45d325a, type: 3}
+  - {fileID: 420671446952720253, guid: 908bbae8372452f4da0973b6c2e0c994, type: 3}
 --- !u!1 &1033266365 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3474829874227755766, guid: 7e5188cca7f91234384e5e4d169a1b90,
@@ -4088,6 +4096,11 @@ PrefabInstance:
       propertyPath: downButton
       value: 
       objectReference: {fileID: 620348419}
+    - target: {fileID: 2087791716778175573, guid: 7e5188cca7f91234384e5e4d169a1b90,
+        type: 3}
+      propertyPath: distanceBetweenButtons
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 2102604053414703678, guid: 7e5188cca7f91234384e5e4d169a1b90,
         type: 3}
       propertyPath: downButton

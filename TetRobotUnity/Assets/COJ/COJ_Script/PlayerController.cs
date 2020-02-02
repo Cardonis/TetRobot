@@ -24,14 +24,6 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Rotate();
-        if (Input.GetButton(fire))
-        {
-            if(canShoot == true)
-            {
-                canShoot = false;
-               // StartCoroutine(Shoot());
-            }
-        }
     }
 
     /// <summary>
@@ -65,11 +57,4 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.Rotate(0, 0, zAngle * rotationSpeed * Time.deltaTime,Space.World);
 
     }
-
-    /*IEnumerator Shoot()
-    {
-        Instantiate(bulletPrefab, gameObject.transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(0.2f);
-        canShoot = true;
-    }*/
 }

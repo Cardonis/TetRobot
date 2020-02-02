@@ -142,4 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  distanceBetweenButtons: 0.75
+  distanceBetweenButtons: 2.5
+  leftButton: {fileID: 0}
+  upButton: {fileID: 0}
+  rightButton: {fileID: 0}
+  downButton: {fileID: 0}

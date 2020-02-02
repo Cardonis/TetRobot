@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 8650703451902467135}
   - component: {fileID: 8650703451902467132}
   - component: {fileID: 8650703451902467133}
+  - component: {fileID: 6660793780270414797}
   m_Layer: 0
   m_Name: GatlingP2
   m_TagString: Untagged
@@ -56,9 +57,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8650703451902467075}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 851828116565221674}
   m_Father: {fileID: 0}
@@ -157,3 +158,22 @@ MonoBehaviour:
     type: 3}
   fire: Fire_Player2
   firePoint: {fileID: 0}
+--- !u!95 &6660793780270414797
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8650703451902467075}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c0cb7fc22d421dd47ab08896b43837ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

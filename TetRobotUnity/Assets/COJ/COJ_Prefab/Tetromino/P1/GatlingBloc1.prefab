@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: GatlingBloc1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6172920878883035518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.87, y: -3.24, z: -2774.7502}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.3445, y: 2.3445, z: 1}
   m_Children:
   - {fileID: 3483502247397580843}
@@ -49,17 +49,17 @@ PrefabInstance:
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.18873024
+      value: -0.31268138
       objectReference: {fileID: 0}
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.018628895
+      value: 0.0097
       objectReference: {fileID: 0}
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2774.7502
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
@@ -124,17 +124,17 @@ PrefabInstance:
     - target: {fileID: 634423010954018263, guid: 0cb236e7880090b4fa6db025a15d9951,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1313515
+      value: 0.0074003423
       objectReference: {fileID: 0}
     - target: {fileID: 634423010954018263, guid: 0cb236e7880090b4fa6db025a15d9951,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0224
+      value: 0.005928904
       objectReference: {fileID: 0}
     - target: {fileID: 634423010954018263, guid: 0cb236e7880090b4fa6db025a15d9951,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2774.7502
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 634423010954018263, guid: 0cb236e7880090b4fa6db025a15d9951,
         type: 3}
@@ -209,17 +209,17 @@ PrefabInstance:
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.13135147
+      value: 0.0074003125
       objectReference: {fileID: 0}
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.30104923
+      value: 0.3293781
       objectReference: {fileID: 0}
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2774.7502
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
@@ -284,17 +284,17 @@ PrefabInstance:
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.45135117
+      value: 0.3274
       objectReference: {fileID: 0}
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.018628895
+      value: 0.0097
       objectReference: {fileID: 0}
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2774.7502
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
