@@ -12,18 +12,23 @@ public class PlayerController : MonoBehaviour
     bool canShoot = true;
 
     public string fire, horizontalAxe, verticalAxe, rotateRight, rotateLeft;
-
+    public GameObject gM;
     // Start is called before the first frame update
     void Start()
     {
-        player = gameObject.GetComponent<Rigidbody2D>(); 
+        player = gameObject.GetComponent<Rigidbody2D>();
+        gM = GameObject.FindGameObjectWithTag("GameManager");
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
-        Rotate();
+        if (gM.GetComponent<GameplayPhase>().inBuild == false)
+        {
+            Move();
+            Rotate();
+        }
+            
     }
 
     /// <summary>
