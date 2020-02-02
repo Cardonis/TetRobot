@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.ParticleSystemJobs;
 
 public class GatlingBehaviour : MonoBehaviour
 {
@@ -14,10 +15,13 @@ public class GatlingBehaviour : MonoBehaviour
     public GameObject gM;
     public float shootRate;
 
+    ParticleSystem etincelles;
 
     // Start is called before the first frame update
     void Start()
     {
+        etincelles = transform.GetChild(1).gameObject.GetComponent<ParticleSystem>();
+
         firePoint = gameObject.transform.GetChild(0);
         fireAnim = gameObject.GetComponent<Animator>();
 
@@ -36,6 +40,8 @@ public class GatlingBehaviour : MonoBehaviour
                     canShoot = false;
                     StartCoroutine(Shoot());
                     fireAnim.SetBool("isShooting", true);
+
+                    etincelles.Play();
                 }
             }
             else
