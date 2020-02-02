@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &8712769088917237085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294183046519349118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c07c4207c9a08d4685b23be6169845a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7845330443300390712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3465938630255072531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c07c4207c9a08d4685b23be6169845a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8411080070580751000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3604299569544026710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c07c4207c9a08d4685b23be6169845a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5038395607881889310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6587859176856603571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c07c4207c9a08d4685b23be6169845a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8666534396386655987
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,6 +57,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4063313196176221495}
+  - component: {fileID: 5199768024485964574}
   m_Layer: 0
   m_Name: GatlingBloc6
   m_TagString: Untagged
@@ -34,6 +83,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5199768024485964574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8666534396386655987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 471f11d607f70ed44a078bcd37db83d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPv: 5
+  currentPv: 0
 --- !u!1001 &394735005938126719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45,6 +108,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bloc gros rouge
+      objectReference: {fileID: 0}
+    - target: {fileID: 3999031788039656745, guid: fa2442dc281aecb4aaf7731093d86924,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bloc
       objectReference: {fileID: 0}
     - target: {fileID: 8617751816894406489, guid: fa2442dc281aecb4aaf7731093d86924,
         type: 3}
@@ -103,6 +171,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa2442dc281aecb4aaf7731093d86924, type: 3}
+--- !u!1 &3604299569544026710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3999031788039656745, guid: fa2442dc281aecb4aaf7731093d86924,
+    type: 3}
+  m_PrefabInstance: {fileID: 394735005938126719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8278186743944794150 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8617751816894406489, guid: fa2442dc281aecb4aaf7731093d86924,
@@ -120,6 +194,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GatlingP1
+      objectReference: {fileID: 0}
+    - target: {fileID: 634423010954018262, guid: 0cb236e7880090b4fa6db025a15d9951,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bloc
       objectReference: {fileID: 0}
     - target: {fileID: 634423010954018263, guid: 0cb236e7880090b4fa6db025a15d9951,
         type: 3}
@@ -188,6 +267,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cb236e7880090b4fa6db025a15d9951, type: 3}
+--- !u!1 &1294183046519349118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 634423010954018262, guid: 0cb236e7880090b4fa6db025a15d9951,
+    type: 3}
+  m_PrefabInstance: {fileID: 1817256060619137704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1294183046519349119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 634423010954018263, guid: 0cb236e7880090b4fa6db025a15d9951,
@@ -205,6 +290,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bloc sans rouge
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380440906030706982, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bloc
       objectReference: {fileID: 0}
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
@@ -263,6 +353,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44, type: 3}
+--- !u!1 &6587859176856603571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7380440906030706982, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
+    type: 3}
+  m_PrefabInstance: {fileID: 4395602171856239253}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5635089666055375994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
@@ -280,6 +376,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bloc sans rouge (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380440906030706982, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bloc
       objectReference: {fileID: 0}
     - target: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
         type: 3}
@@ -338,6 +439,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44, type: 3}
+--- !u!1 &3465938630255072531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7380440906030706982, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,
+    type: 3}
+  m_PrefabInstance: {fileID: 6230144271262983221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2685948472456712922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8301133376406533871, guid: 7aeb9df3738a6434ab1b9cc9a0d93b44,

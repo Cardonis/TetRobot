@@ -42,6 +42,7 @@ public class ProjectileBehaviour : MonoBehaviour
         if (collision.CompareTag("Bloc"))
         {
             collision.GetComponent<BlocHit>().DamageTaken();
+            Destroy(gameObject);
         }
     }
 }
