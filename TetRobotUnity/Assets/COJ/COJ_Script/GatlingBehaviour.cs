@@ -26,8 +26,8 @@ public class GatlingBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gM.GetComponent<GameplayPhase>().inBuild == false)
-        {
+        //if (gM.GetComponent<GameplayPhase>().inBuild == false)
+        //{
             if (Input.GetButton(fire))
             {
                 if (canShoot == true)
@@ -41,7 +41,7 @@ public class GatlingBehaviour : MonoBehaviour
             {
                 fireAnim.SetBool("isShooting", false);
             }
-        }
+        //}
        
     }
 

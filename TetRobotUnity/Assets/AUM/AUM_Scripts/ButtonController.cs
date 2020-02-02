@@ -66,7 +66,11 @@ public class ButtonController : MonoBehaviour, ISelectHandler
         {
             buildController.GetComponent<BuildController1>().currentPiece.transform.position = transform.position;
         }
-        
+        else if (player == 2)
+        {
+            buildController.GetComponent<BuildController2>().currentPiece.transform.position = transform.position;
+        }
+
     }
 
     public void BlockPosed()
@@ -124,7 +128,7 @@ public class ButtonController : MonoBehaviour, ISelectHandler
                 buildController.GetComponent<BuildController1>().currentPiece = Instantiate(buildController.GetComponent<BuildController1>().piecesComing[0], GameObject.Find("Ship1").transform);
 
                 buildController.GetComponent<BuildController1>().currentPiece.transform.position = transform.position;
-                buildController.GetComponent<BuildController1>().piecesComing.Add(GameObject.Find("PieceGenerator").GetComponent<PieceGenerator>().GivePiece());
+                buildController.GetComponent<BuildController1>().piecesComing.Add(buildController.GetComponent<BuildController1>().pieceGenerator.GetComponent<PieceGenerator>().GivePiece());
 
                 buildController.GetComponent<BuildController1>().UpdatePiecesComing();
             }
@@ -143,6 +147,81 @@ public class ButtonController : MonoBehaviour, ISelectHandler
 
                 }
             
+
+        }
+
+        else if (player == 2)
+        {
+            bool stop = true;
+
+            GameObject[] buttons2 = GameObject.FindGameObjectsWithTag("Button2");
+            GameObject[] blocs = GameObject.FindGameObjectsWithTag("Bloc");
+
+            foreach (GameObject button2 in buttons2)
+            {
+                foreach (GameObject bloc in blocs)
+                {
+                    if (bloc.transform.position.x >= button2.transform.position.x - 0.2f && bloc.transform.position.x <= button2.transform.position.x + 0.2f
+                        && bloc.transform.position.y >= button2.transform.position.y - 0.2f && bloc.transform.position.y <= button2.transform.position.y + 0.2f)
+                    {
+                        button2.GetComponent<ButtonController>().thisBloc = bloc;
+                        button2.GetComponent<ButtonController>().thisBlocked = true;
+                        button2.GetComponent<ButtonController>().numberOfBlocks++;
+                    }
+
+                }
+            }
+
+            foreach (GameObject button2 in buttons2)
+            {
+                if (button2.GetComponent<ButtonController>().readyToPlace == true && button2.GetComponent<ButtonController>().thisBloc != null)
+                {
+                    stop = false;
+                    break;
+                }
+
+            }
+
+            foreach (GameObject button2 in buttons2)
+            {
+                if (button2.GetComponent<ButtonController>().numberOfBlocks > 1)
+                {
+                    stop = true;
+                    break;
+                }
+
+            }
+
+            if (stop == false)
+            {
+                foreach (GameObject button2 in buttons2)
+                {
+                    button2.GetComponent<ButtonController>().CheckBlocs();
+                }
+
+                buildController.GetComponent<BuildController2>().piecesComing.RemoveAt(0);
+                buildController.GetComponent<BuildController2>().currentPiece = Instantiate(buildController.GetComponent<BuildController2>().piecesComing[0], GameObject.Find("Ship1").transform);
+                                                            
+                buildController.GetComponent<BuildController2>().currentPiece.transform.position = transform.position;
+                buildController.GetComponent<BuildController2>().piecesComing.Add(buildController.GetComponent<BuildController2>().pieceGenerator.GetComponent<PieceGenerator>().GivePiece());
+                                                            
+                buildController.GetComponent<BuildController2>().UpdatePiecesComing();
+            }
+
+            foreach (GameObject button2 in buttons2)
+            {
+                if (button2.GetComponent<ButtonController>().thisBlocked == true)
+                {
+                    button2.GetComponent<ButtonController>().thisBloc = null;
+                    button2.GetComponent<ButtonController>().thisBlocked = false;
+                }
+
+
+
+                button2.GetComponent<ButtonController>().numberOfBlocks = 0;
+
+            }
+
 
         }
     }

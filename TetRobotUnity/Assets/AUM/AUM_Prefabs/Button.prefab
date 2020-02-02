@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 5300148899502959815}
   - component: {fileID: 5300148899502959832}
   - component: {fileID: 5300148899502959833}
-  - component: {fileID: 5300148899502959814}
+  - component: {fileID: 5232655857385061068}
   - component: {fileID: 7299676984234179175}
+  - component: {fileID: 3486260579340858735}
   m_Layer: 5
   m_Name: Button
   m_TagString: Button1
@@ -75,7 +76,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5300148899502959814
+--- !u!114 &5232655857385061068
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -84,7 +85,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5300148899502959812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a3ac68f18729e542ba49cccd97eb2a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -95,10 +96,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.03529412}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.02745098}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.23921569}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -129,6 +130,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  eventSystem: {fileID: 0}
 --- !u!114 &7299676984234179175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,3 +149,16 @@ MonoBehaviour:
   upButton: {fileID: 0}
   rightButton: {fileID: 0}
   downButton: {fileID: 0}
+--- !u!114 &3486260579340858735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5300148899502959812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27923ab67353ea8429fba87abbe61e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 0}
