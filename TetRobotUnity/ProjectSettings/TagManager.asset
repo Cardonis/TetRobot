@@ -11,6 +11,8 @@ TagManager:
   - GameManager
   - Button2
   - obstacles
+  - Pilote1
+  - Pilote2
   layers:
   - Default
   - TransparentFX

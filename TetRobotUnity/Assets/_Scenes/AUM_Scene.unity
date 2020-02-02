@@ -8182,7 +8182,7 @@ GameObject:
   - component: {fileID: 1165427155}
   m_Layer: 0
   m_Name: Ship2
-  m_TagString: Untagged
+  m_TagString: P2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9876,6 +9876,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coeur
       objectReference: {fileID: 0}
+    - target: {fileID: 4293989527817075163, guid: 9dd97aee8df30b64ba80d71b50f217cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pilote2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dd97aee8df30b64ba80d71b50f217cc, type: 3}
 --- !u!1 &1496072361 stripped
@@ -10536,7 +10541,7 @@ GameObject:
   - component: {fileID: 1665143410}
   m_Layer: 0
   m_Name: Ship1
-  m_TagString: Untagged
+  m_TagString: Pilote1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10617,6 +10622,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPv: 5
   currentPv: 0
+--- !u!114 &1675625924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675625921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d0de4d4e969a1459b587b6e22f9ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1677724914 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3597729460931404957, guid: 7e5188cca7f91234384e5e4d169a1b90,
@@ -11468,6 +11485,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coeur
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331573189266495876, guid: 0c65c6bbfbfbf244db07c33b2940858d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pilote1
       objectReference: {fileID: 0}
     - target: {fileID: 8525925412621754886, guid: 0c65c6bbfbfbf244db07c33b2940858d,
         type: 3}
@@ -12846,6 +12868,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPv: 5
   currentPv: 0
+--- !u!114 &2000443714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000443711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d0de4d4e969a1459b587b6e22f9ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2012049431 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8778265622659125804, guid: 7e5188cca7f91234384e5e4d169a1b90,

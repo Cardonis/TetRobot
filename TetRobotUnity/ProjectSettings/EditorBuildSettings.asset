@@ -15,6 +15,15 @@ EditorBuildSettings:
     path: Assets/COJ/COJ_Scene/AnimVS.unity
     guid: ad8bfa471de58cd4e964fe6cb9e5f5c5
   - enabled: 1
-    path: Assets/COJ/COJ_Scene/Controller.unity
-    guid: 003c640063100000093c640063100000
+    path: Assets/_Scenes/AUM_Scene.unity
+    guid: d93c38c7105dadc44bca5eb623417c80
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/COJ/COJ_Scene/VictoryP4.unity
+    guid: 20aed19d5664b884099d6ea6fc1d47a2
+  - enabled: 1
+    path: Assets/COJ/COJ_Scene/VictoryP2.unity
+    guid: 8610f7db42f7cea45bc2acd12887c4c0
   m_configObjects: {}
